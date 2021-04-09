@@ -1,7 +1,7 @@
 var cartaPaulo = {
   nome: "Seiya de Pegaso",
   imagem:
-    "https://cdna.artstation.com/p/assets/images/images/018/537/804/large/joao-pedro-calheiros-miranda-dos-santos-seiya-site-reduzido.jpg?1559751054",
+    "https://i.pinimg.com/originals/c2/1a/ac/c21aacd5d092bf17cfff269091f04606.jpg",
   atributos: {
     ataque: 80,
     defesa: 60,
@@ -12,7 +12,7 @@ var cartaPaulo = {
 var cartaRafa = {
   nome: "Bulbasauro",
   imagem:
-    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F675891856546435874%2F&psig=AOvVaw2I-x0dThaxnCFNIGCPUv7F&ust=1618097062129000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIiBiryn8u8CFQAAAAAdAAAAABAD",
+    "http://4.bp.blogspot.com/-ZoCqleSAYNc/UQgfMdobjUI/AAAAAAAACP0/s_iiWjmw2Ys/s1600/001Bulbasaur_Dream.png",
   atributos: {
     ataque: 70,
     defesa: 65,
@@ -23,11 +23,66 @@ var cartaRafa = {
 var cartaGui = {
   nome: "Lorde Darth Vader",
   imagem:
-    "https://i.pinimg.com/originals/b0/9f/89/b09f89629472cad0f1d55fbde0836c2b.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/51VJBqMZVAL._SX328_BO1,204,203,200_.jpg",
   atributos: {
     ataque: 88,
     defesa: 62,
     magia: 90,
+  },
+};
+
+var cartaLol = {
+  nome: "Caitlyn",
+  imagem:
+    "http://1.bp.blogspot.com/-K7CbqWc1-p0/VLc98v85s0I/AAAAAAAABqk/-ZB684VVHbg/s1600/Caitlyn_OriginalSkin.jpg",
+  atributos: {
+    ataque: 95,
+    defesa: 40,
+    magia: 10,
+  },
+};
+
+var cartaNaruto = {
+  nome: "Naruto",
+  imagem:
+    "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_450x337.png",
+  atributos: {
+    ataque: 80,
+    defesa: 60,
+    magia: 100,
+  },
+};
+
+var cartaHarry = {
+  nome: "Harry Potter",
+  imagem:
+    "https://sm.ign.com/ign_br/screenshot/default/89ff10dd-aa41-4d17-ae8f-835281ebd3fd_49hp.jpg",
+  atributos: {
+    ataque: 70,
+    defesa: 50,
+    magia: 95,
+  },
+};
+
+var cartaBatman = {
+  nome: "Batman",
+  imagem:
+    "https://assets.b9.com.br/wp-content/uploads/2020/09/Batman-issue86-heder-1280x677.jpg",
+  atributos: {
+    ataque: 95,
+    defesa: 70,
+    magia: 0,
+  },
+};
+
+var cartaMarvel = {
+  nome: "Capitã Marvel",
+  imagem:
+    "https://cinepop.com.br/wp-content/uploads/2018/09/capitamarvel21.jpg",
+  atributos: {
+    ataque: 90,
+    defesa: 80,
+    magia: 0,
   },
 };
 
@@ -53,7 +108,11 @@ function sortearCarta() {
 
 function exibeCartaJogador() {
   var divCartaJogador = document.getElementById("carta-jogador");
+
   divCartaJogador.style.backgroundImage = "url(${cartaJogador.imagem})";
+  var nome = '<p class= "carta-subtitle">${cartaJogador.nome}</p>';
+
+  divCartaJogador.innerHTML = nome;
 }
 
 function exibirOpcoes() {
