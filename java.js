@@ -1,5 +1,7 @@
 var cartaPaulo = {
   nome: "Seiya de Pegaso",
+  imagem:
+    "https://cdna.artstation.com/p/assets/images/images/018/537/804/large/joao-pedro-calheiros-miranda-dos-santos-seiya-site-reduzido.jpg?1559751054",
   atributos: {
     ataque: 80,
     defesa: 60,
@@ -9,6 +11,8 @@ var cartaPaulo = {
 
 var cartaRafa = {
   nome: "Bulbasauro",
+  imagem:
+    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F675891856546435874%2F&psig=AOvVaw2I-x0dThaxnCFNIGCPUv7F&ust=1618097062129000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIiBiryn8u8CFQAAAAAdAAAAABAD",
   atributos: {
     ataque: 70,
     defesa: 65,
@@ -18,6 +22,8 @@ var cartaRafa = {
 
 var cartaGui = {
   nome: "Lorde Darth Vader",
+  imagem:
+    "https://i.pinimg.com/originals/b0/9f/89/b09f89629472cad0f1d55fbde0836c2b.jpg",
   atributos: {
     ataque: 88,
     defesa: 62,
@@ -28,7 +34,6 @@ var cartaGui = {
 var cartaMaquina;
 var cartaJogador;
 var cartas = [cartaPaulo, cartaRafa, cartaGui];
-// 0          1           2
 
 function sortearCarta() {
   var numeroCartaMaquina = parseInt(Math.random() * 3);
@@ -44,6 +49,11 @@ function sortearCarta() {
   document.getElementById("btnSortear").disabled = true;
   document.getElementById("btnJogar").disabled = false;
   exibirOpcoes();
+}
+
+function exibeCartaJogador() {
+  var divCartaJogador = document.getElementById("carta-jogador");
+  divCartaJogador.style.backgroundImage = "url(${cartaJogador.imagem})";
 }
 
 function exibirOpcoes() {
